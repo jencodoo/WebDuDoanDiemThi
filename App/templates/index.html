@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dự đoán nghề nghiệp bằng điểm thi</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Dự đoán nghề nghiệp bằng điểm thi</h1>
+    <form method="POST">
+        <div class="form-row">
+            <div>
+                <label for="toan">Điểm Toán:</label>
+                <input type="number" step="0.1" name="toan" required>
+            </div>
+            <div>
+                <label for="van">Điểm Văn:</label>
+                <input type="number" step="0.1" name="van" required>
+            </div>
+            <div>
+                <label for="ngoaingu">Điểm Ngoại Ngữ:</label>
+                <input type="number" step="0.1" name="ngoaingu" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div>
+                <label for="vatly">Điểm Vật Lý:</label>
+                <input type="number" step="0.1" name="vatly" required>
+            </div>
+            <div>
+                <label for="hoahoc">Điểm Hóa Học:</label>
+                <input type="number" step="0.1" name="hoahoc" required>
+            </div>
+            <div>
+                <label for="sinhhoc">Điểm Sinh Học:</label>
+                <input type="number" step="0.1" name="sinhhoc" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div>
+                <label for="lichsu">Điểm Lịch Sử:</label>
+                <input type="number" step="0.1" name="lichsu" required>
+            </div>
+            <div>
+                <label for="dialy">Điểm Địa Lý:</label>
+                <input type="number" step="0.1" name="dialy" required>
+            </div>
+            <div>
+                <label for="gdcd">Điểm GDCD:</label>
+                <input type="number" step="0.1" name="gdcd" required>
+            </div>
+        </div>
+
+        <input type="submit" value="Tính toán">
+    </form>
+
+    {% if predicted_career %}
+        <div class="result">
+            <h2>Kết quả:</h2>
+            <p>Tổ hợp A: {{ a }}</p>
+            <p>Tổ hợp A01: {{ a01 }}</p>
+            <p>Tổ hợp B: {{ b }}</p>
+            <p>Tổ hợp C: {{ c }}</p>
+            <p>Tổ hợp D: {{ d }}</p>
+            <h3>Tổ hợp cao nhất: {{ highest_combination }} với điểm: {{ highest_value }}</h3>
+            <h3>Nghề nghiệp dự đoán: {{ predicted_career }}</h3>
+            
+        </div>
+    {% endif %}
+</body>
+</html>

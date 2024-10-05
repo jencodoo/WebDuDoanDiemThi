@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Đặt chiều rộng tối đa cho form */
+    margin: 0 auto; /* Giữa màn hình */
+}
+
+.form-row {
+    display: flex;
+    justify-content: center; /* Giữa các cột */
+    margin-bottom: 20px; /* Khoảng cách giữa các hàng */
+}
+
+label {
+    margin-right: 10px;
+    width: 120px; /* Cố định chiều rộng cho label */
+}
+
+input[type="number"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 0 10px; /* Khoảng cách giữa các trường nhập */
+}
+
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block; /* Đặt thành khối để căn giữa */
+    margin: 20px auto; /* Giữa màn hình */
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+.result {
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
